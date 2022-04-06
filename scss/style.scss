@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem 0;
+  justify-content: center;
+  margin: 2rem 0;
+
+  .kick-container,
+  .snare-container,
+  .clap-container {
+    display: flex;
+    gap: 0 2rem;
+
+    .kick,
+    .snare,
+    .clap {
+      button {
+        padding: 0.7rem 1rem;
+        border: none;
+        background-color: #28a745;
+        color: #fff;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

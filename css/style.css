@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem 0;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.wrapper .kick-container,
+.wrapper .snare-container,
+.wrapper .clap-container {
+  display: flex;
+  gap: 0 2rem;
+}
+.wrapper .kick-container .kick button,
+.wrapper .kick-container .snare button,
+.wrapper .kick-container .clap button,
+.wrapper .snare-container .kick button,
+.wrapper .snare-container .snare button,
+.wrapper .snare-container .clap button,
+.wrapper .clap-container .kick button,
+.wrapper .clap-container .snare button,
+.wrapper .clap-container .clap button {
+  padding: 0.7rem 1rem;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
