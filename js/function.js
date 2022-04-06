@@ -1,7 +1,8 @@
 const kickContainerList = document.querySelectorAll(".kick-container .kick");
 
 const playAudio = (element) => {
-  element.currentTime = 0;
+  //   element.currentTime = 0;
+  element.load();
   element.play();
 };
 
