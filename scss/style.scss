@@ -13,23 +13,58 @@ body {
   display: grid;
   grid-gap: 2rem 0;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
 
   .kick-container,
   .snare-container,
   .clap-container {
     display: flex;
-    gap: 0 2rem;
 
     .kick,
     .snare,
     .clap {
+      display: flex;
+      justify-content: center;
+
       button {
-        padding: 0.7rem 1rem;
+        padding: 1.2rem 2rem;
         border: none;
         background-color: #28a745;
         color: #fff;
         border-radius: 1rem;
+        cursor: pointer;
+      }
+    }
+
+    .kick img,
+    .snare img,
+    .clap img {
+      width: 40%;
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+
+      &.active {
+        transform: translateY(20px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    width: 1400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    .kick-container,
+    .snare-container,
+    .clap-container {
+      .kick img,
+      .snare img,
+      .clap img {
+        width: 60%;
         cursor: pointer;
       }
     }

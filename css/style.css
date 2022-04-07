@@ -13,13 +13,24 @@ body {
   display: grid;
   grid-gap: 2rem 0;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2rem auto;
 }
 .wrapper .kick-container,
 .wrapper .snare-container,
 .wrapper .clap-container {
   display: flex;
-  gap: 0 2rem;
+}
+.wrapper .kick-container .kick,
+.wrapper .kick-container .snare,
+.wrapper .kick-container .clap,
+.wrapper .snare-container .kick,
+.wrapper .snare-container .snare,
+.wrapper .snare-container .clap,
+.wrapper .clap-container .kick,
+.wrapper .clap-container .snare,
+.wrapper .clap-container .clap {
+  display: flex;
+  justify-content: center;
 }
 .wrapper .kick-container .kick button,
 .wrapper .kick-container .snare button,
@@ -30,12 +41,56 @@ body {
 .wrapper .clap-container .kick button,
 .wrapper .clap-container .snare button,
 .wrapper .clap-container .clap button {
-  padding: 0.7rem 1rem;
+  padding: 1.2rem 2rem;
   border: none;
   background-color: #28a745;
   color: #fff;
   border-radius: 1rem;
   cursor: pointer;
+}
+.wrapper .kick-container .kick img,
+.wrapper .kick-container .snare img,
+.wrapper .kick-container .clap img,
+.wrapper .snare-container .kick img,
+.wrapper .snare-container .snare img,
+.wrapper .snare-container .clap img,
+.wrapper .clap-container .kick img,
+.wrapper .clap-container .snare img,
+.wrapper .clap-container .clap img {
+  width: 40%;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.wrapper .kick-container .kick img.active,
+.wrapper .kick-container .snare img.active,
+.wrapper .kick-container .clap img.active,
+.wrapper .snare-container .kick img.active,
+.wrapper .snare-container .snare img.active,
+.wrapper .snare-container .clap img.active,
+.wrapper .clap-container .kick img.active,
+.wrapper .clap-container .snare img.active,
+.wrapper .clap-container .clap img.active {
+  transform: translateY(20px);
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    width: 1400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrapper .kick-container .kick img,
+.wrapper .kick-container .snare img,
+.wrapper .kick-container .clap img,
+.wrapper .snare-container .kick img,
+.wrapper .snare-container .snare img,
+.wrapper .snare-container .clap img,
+.wrapper .clap-container .kick img,
+.wrapper .clap-container .snare img,
+.wrapper .clap-container .clap img {
+    width: 60%;
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
