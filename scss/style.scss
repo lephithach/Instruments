@@ -6,25 +6,43 @@
 
 body {
   font-size: 16px;
+  background-image: url("../images/1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: -1;
+  }
 }
 
 .wrapper {
   width: 100%;
-  display: grid;
-  grid-gap: 2rem 0;
-  justify-content: center;
-  margin: 2rem auto;
+  padding: 2rem auto;
+  margin: 0 auto;
+  cursor: url("../images/dui-trong.png"), auto;
+  color: #fff;
 
   .kick-container,
   .snare-container,
   .clap-container {
     display: flex;
+    padding: 1rem 0;
 
     .kick,
     .snare,
     .clap {
       display: flex;
-      justify-content: center;
+      align-items: center;
+      flex-direction: column;
 
       button {
         padding: 1.2rem 2rem;
